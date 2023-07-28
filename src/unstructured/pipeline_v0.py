@@ -12,8 +12,13 @@ class PipelineV0:
         self.sdk_configuration = sdk_config
         
     
-    def build(self, request: operations.Pipeline1GeneralV0GeneralPostRequest) -> operations.Pipeline1GeneralV0GeneralPostResponse:
+    def build(self, pipeline_body_v0: Optional[shared.PipelineBodyV0] = None, unstructured_api_key: Optional[str] = None) -> operations.Pipeline1GeneralV0GeneralPostResponse:
         r"""Pipeline 1"""
+        request = operations.Pipeline1GeneralV0GeneralPostRequest(
+            pipeline_body_v0=pipeline_body_v0,
+            unstructured_api_key=unstructured_api_key,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/general/v0/general'
