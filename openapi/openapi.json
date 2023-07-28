@@ -1,336 +1,215 @@
-{
-   "openapi":"3.1.0",
-   "info":{
-      "title":"Unstructured Pipeline API",
-      "version":"1.0.0"
-   },
-   "servers": [
-      {"url": "https://api.unstructured.io"}
-   ],
-   "paths":{
-      "/general/v0.0.31/general":{
-         "post":{
-            "summary":"Pipeline 1",
-            "operationId":"pipeline_1_general_v0_0_31_general_post",
-            "x-speakeasy-name-override": "build",
-            "tags": [
-                "pipeline_v0_0_31"
-            ],
-            "parameters":[
-               {
-                  "required":false,
-                  "schema":{
-                     "type":"string",
-                     "title":"Unstructured-Api-Key"
-                  },
-                  "name":"unstructured-api-key",
-                  "in":"header"
-               }
-            ],
-            "requestBody":{
-               "content":{
-                  "multipart/form-data":{
-                     "schema":{
-                        "$ref":"#/components/schemas/Pipeline_Body_v0_0_31"
-                     }
-                  }
-               }
-            },
-            "responses":{
-               "200":{
-                  "description":"Successful Response"
-               },
-               "422":{
-                  "description":"Validation Error",
-                  "content":{
-                     "application/json":{
-                        "schema":{
-                           "$ref":"#/components/schemas/HTTPValidationError"
-                        }
-                     }
-                  }
-               }
-            }
-         }
-      },
-      "/general/v0/general":{
-         "post":{
-            "summary":"Pipeline 1",
-            "operationId":"pipeline_1_general_v0_general_post",
-            "x-speakeasy-name-override": "build",
-            "tags": [
-                "pipeline_v0"
-            ],
-            "parameters":[
-               {
-                  "required":false,
-                  "schema":{
-                     "type":"string",
-                     "title":"Unstructured-Api-Key"
-                  },
-                  "name":"unstructured-api-key",
-                  "in":"header"
-               }
-            ],
-            "requestBody":{
-               "content":{
-                  "multipart/form-data":{
-                     "schema":{
-                        "$ref":"#/components/schemas/Pipeline_Body_v0"
-                     }
-                  }
-               }
-            },
-            "responses":{
-               "200":{
-                  "description":"Successful Response"
-               },
-               "422":{
-                  "description":"Validation Error",
-                  "content":{
-                     "application/json":{
-                        "schema":{
-                           "$ref":"#/components/schemas/HTTPValidationError"
-                        }
-                     }
-                  }
-               }
-            }
-         }
-      }
-   },
-   "components":{
-      "schemas":{
-         "Pipeline_Body_v0_0_31":{
-            "properties":{
-               "gz_uncompressed_content_type":{
-                  "type":"string",
-                  "title":"Gz Uncompressed Content Type"
-               },
-               "files":{
-                  "items":{
-                     "type":"string",
-                     "format":"binary"
-                  },
-                  "type":"array",
-                  "title":"Files"
-               },
-               "output_format":{
-                  "type":"string",
-                  "title":"Output Format"
-               },
-               "strategy":{
-                  "items":{
-                     "type":"string"
-                  },
-                  "type":"array",
-                  "title":"Strategy",
-                  "default":[
-                     
-                  ]
-               },
-               "coordinates":{
-                  "items":{
-                     "type":"string"
-                  },
-                  "type":"array",
-                  "title":"Coordinates",
-                  "default":[
-                     
-                  ]
-               },
-               "ocr_languages":{
-                  "items":{
-                     "type":"string"
-                  },
-                  "type":"array",
-                  "title":"Ocr Languages",
-                  "default":[
-                     
-                  ]
-               },
-               "encoding":{
-                  "items":{
-                     "type":"string"
-                  },
-                  "type":"array",
-                  "title":"Encoding",
-                  "default":[
-                     
-                  ]
-               },
-               "xml_keep_tags":{
-                  "items":{
-                     "type":"string"
-                  },
-                  "type":"array",
-                  "title":"Xml Keep Tags",
-                  "default":[
-                     
-                  ]
-               },
-               "pdf_infer_table_structure":{
-                  "items":{
-                     "type":"string"
-                  },
-                  "type":"array",
-                  "title":"Pdf Infer Table Structure",
-                  "default":[
-                     
-                  ]
-               },
-               "hi_res_model_name":{
-                  "items":{
-                     "type":"string"
-                  },
-                  "type":"array",
-                  "title":"Hi Res Model Name",
-                  "default":[
-                     
-                  ]
-               }
-            },
-            "type":"object",
-            "title":"Pipeline_Request_v0_0_31"
-         },
-         "Pipeline_Body_v0":{
-            "properties":{
-               "gz_uncompressed_content_type":{
-                  "type":"string",
-                  "title":"Gz Uncompressed Content Type"
-               },
-               "files":{
-                  "items":{
-                     "type":"string",
-                     "format":"binary"
-                  },
-                  "type":"array",
-                  "title":"Files"
-               },
-               "output_format":{
-                  "type":"string",
-                  "title":"Output Format"
-               },
-               "strategy":{
-                  "items":{
-                     "type":"string"
-                  },
-                  "type":"array",
-                  "title":"Strategy",
-                  "default":[
-                     
-                  ]
-               },
-               "coordinates":{
-                  "items":{
-                     "type":"string"
-                  },
-                  "type":"array",
-                  "title":"Coordinates",
-                  "default":[
-                     
-                  ]
-               },
-               "ocr_languages":{
-                  "items":{
-                     "type":"string"
-                  },
-                  "type":"array",
-                  "title":"Ocr Languages",
-                  "default":[
-                     
-                  ]
-               },
-               "encoding":{
-                  "items":{
-                     "type":"string"
-                  },
-                  "type":"array",
-                  "title":"Encoding",
-                  "default":[
-                     
-                  ]
-               },
-               "xml_keep_tags":{
-                  "items":{
-                     "type":"string"
-                  },
-                  "type":"array",
-                  "title":"Xml Keep Tags",
-                  "default":[
-                     
-                  ]
-               },
-               "pdf_infer_table_structure":{
-                  "items":{
-                     "type":"string"
-                  },
-                  "type":"array",
-                  "title":"Pdf Infer Table Structure",
-                  "default":[
-                     
-                  ]
-               },
-               "hi_res_model_name":{
-                  "items":{
-                     "type":"string"
-                  },
-                  "type":"array",
-                  "title":"Hi Res Model Name",
-                  "default":[
-                     
-                  ]
-               }
-            },
-            "type":"object",
-            "title":"Pipeline_Request_v0"
-         },
-         "HTTPValidationError":{
-            "properties":{
-               "detail":{
-                  "items":{
-                     "$ref":"#/components/schemas/ValidationError"
-                  },
-                  "type":"array",
-                  "title":"Detail"
-               }
-            },
-            "type":"object",
-            "title":"HTTPValidationError"
-         },
-         "ValidationError":{
-            "properties":{
-               "loc":{
-                  "items":{
-                     "anyOf":[
-                        {
-                           "type":"string"
-                        },
-                        {
-                           "type":"integer"
-                        }
-                     ]
-                  },
-                  "type":"array",
-                  "title":"Location"
-               },
-               "msg":{
-                  "type":"string",
-                  "title":"Message"
-               },
-               "type":{
-                  "type":"string",
-                  "title":"Error Type"
-               }
-            },
-            "type":"object",
-            "required":[
-               "loc",
-               "msg",
-               "type"
-            ],
-            "title":"ValidationError"
-         }
-      }
-   }
-}
+openapi: 3.1.0
+info:
+  title: Unstructured Pipeline API
+  version: 1.0.0
+servers:
+  - url: https://api.unstructured.io
+paths:
+  x-speakeasy-errors: 
+    statusCodes: 
+      - 4XX
+      - 5XX
+  /general/v0.0.31/general:
+    post:
+      summary: Pipeline 1
+      operationId: pipeline_1_general_v0_0_31_general_post
+      x-speakeasy-name-override: build
+      tags:
+        - pipeline_v0_0_31
+      parameters:
+        - required: false
+          schema:
+            type: string
+            title: Unstructured-Api-Key
+          name: unstructured-api-key
+          in: header
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Pipeline_Body_v0_0_31'
+      responses:
+        '200':
+          description: Successful Response
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /general/v0/general:
+    post:
+      summary: Pipeline 1
+      operationId: pipeline_1_general_v0_general_post
+      x-speakeasy-name-override: build
+      tags:
+        - pipeline_v0
+      parameters:
+        - required: false
+          schema:
+            type: string
+            title: Unstructured-Api-Key
+          name: unstructured-api-key
+          in: header
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Pipeline_Body_v0'
+      responses:
+        '200':
+          description: Successful Response
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+components:
+  schemas:
+    Pipeline_Body_v0_0_31:
+      properties:
+        gz_uncompressed_content_type:
+          type: string
+          title: Gz Uncompressed Content Type
+        files:
+          items:
+            type: string
+            format: binary
+          type: array
+          title: Files
+        output_format:
+          type: string
+          title: Output Format
+        strategy:
+          items:
+            type: string
+          type: array
+          title: Strategy
+          default: []
+        coordinates:
+          items:
+            type: string
+          type: array
+          title: Coordinates
+          default: []
+        ocr_languages:
+          items:
+            type: string
+          type: array
+          title: Ocr Languages
+          default: []
+        encoding:
+          items:
+            type: string
+          type: array
+          title: Encoding
+          default: []
+        xml_keep_tags:
+          items:
+            type: string
+          type: array
+          title: Xml Keep Tags
+          default: []
+        pdf_infer_table_structure:
+          items:
+            type: string
+          type: array
+          title: Pdf Infer Table Structure
+          default: []
+        hi_res_model_name:
+          items:
+            type: string
+          type: array
+          title: Hi Res Model Name
+          default: []
+      type: object
+      title: Pipeline_Request_v0_0_31
+    Pipeline_Body_v0:
+      properties:
+        gz_uncompressed_content_type:
+          type: string
+          title: Gz Uncompressed Content Type
+        files:
+          items:
+            type: string
+            format: binary
+          type: array
+          title: Files
+        output_format:
+          type: string
+          title: Output Format
+        strategy:
+          items:
+            type: string
+          type: array
+          title: Strategy
+          default: []
+        coordinates:
+          items:
+            type: string
+          type: array
+          title: Coordinates
+          default: []
+        ocr_languages:
+          items:
+            type: string
+          type: array
+          title: Ocr Languages
+          default: []
+        encoding:
+          items:
+            type: string
+          type: array
+          title: Encoding
+          default: []
+        xml_keep_tags:
+          items:
+            type: string
+          type: array
+          title: Xml Keep Tags
+          default: []
+        pdf_infer_table_structure:
+          items:
+            type: string
+          type: array
+          title: Pdf Infer Table Structure
+          default: []
+        hi_res_model_name:
+          items:
+            type: string
+          type: array
+          title: Hi Res Model Name
+          default: []
+      type: object
+      title: Pipeline_Request_v0
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+              - type: string
+              - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+        - loc
+        - msg
+        - type
+      title: ValidationError
