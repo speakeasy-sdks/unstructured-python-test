@@ -10,43 +10,30 @@ s = unstructured.Unstructured()
 
 res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
     coordinates=[
-        'provident',
-        'distinctio',
-        'quibusdam',
+        'corrupti',
     ],
     encoding=[
-        'nulla',
-        'corrupti',
-        'illum',
+        'provident',
     ],
     files=[
-        'error'.encode(),
-        'deserunt'.encode(),
+        'distinctio'.encode(),
     ],
-    gz_uncompressed_content_type='suscipit',
+    gz_uncompressed_content_type='quibusdam',
     hi_res_model_name=[
-        'magnam',
-        'debitis',
+        'unde',
     ],
     ocr_languages=[
-        'delectus',
+        'nulla',
     ],
-    output_format='tempora',
+    output_format='corrupti',
     pdf_infer_table_structure=[
-        'molestiae',
-        'minus',
+        'illum',
     ],
     strategy=[
-        'voluptatum',
-        'iusto',
-        'excepturi',
-        'nisi',
+        'vel',
     ],
     xml_keep_tags=[
-        'temporibus',
-        'ab',
-        'quis',
-        'veritatis',
+        'error',
     ],
 ), unstructured_api_key='deserunt')
 

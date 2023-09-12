@@ -19,49 +19,32 @@ s = unstructured.Unstructured()
 
 res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
     coordinates=[
-        'ipsam',
+        'suscipit',
     ],
     encoding=[
-        'sapiente',
-        'quo',
-        'odit',
-        'at',
+        'iure',
     ],
     files=[
-        'maiores'.encode(),
-        'molestiae'.encode(),
-        'quod'.encode(),
-        'quod'.encode(),
+        'magnam'.encode(),
     ],
-    gz_uncompressed_content_type='esse',
+    gz_uncompressed_content_type='debitis',
     hi_res_model_name=[
-        'porro',
-        'dolorum',
-        'dicta',
+        'ipsa',
     ],
     ocr_languages=[
-        'officia',
-        'occaecati',
-        'fugit',
+        'delectus',
     ],
-    output_format='deleniti',
+    output_format='tempora',
     pdf_infer_table_structure=[
-        'optio',
-        'totam',
-        'beatae',
-        'commodi',
+        'suscipit',
     ],
     strategy=[
-        'modi',
-        'qui',
+        'molestiae',
     ],
     xml_keep_tags=[
-        'cum',
-        'esse',
-        'ipsum',
-        'excepturi',
+        'minus',
     ],
-), unstructured_api_key='aspernatur')
+), unstructured_api_key='placeat')
 
 if res.status_code == 200:
     # handle response

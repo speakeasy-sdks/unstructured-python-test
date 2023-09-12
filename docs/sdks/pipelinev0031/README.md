@@ -19,40 +19,32 @@ s = unstructured.Unstructured()
 
 res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(
     coordinates=[
-        'ad',
+        'voluptatum',
     ],
     encoding=[
-        'sed',
-        'iste',
-        'dolor',
+        'iusto',
     ],
     files=[
-        'laboriosam'.encode(),
-        'hic'.encode(),
-        'saepe'.encode(),
+        'excepturi'.encode(),
     ],
-    gz_uncompressed_content_type='fuga',
+    gz_uncompressed_content_type='nisi',
     hi_res_model_name=[
-        'corporis',
-        'iste',
+        'recusandae',
     ],
     ocr_languages=[
-        'saepe',
-        'quidem',
+        'temporibus',
     ],
-    output_format='architecto',
+    output_format='ab',
     pdf_infer_table_structure=[
-        'reiciendis',
+        'quis',
     ],
     strategy=[
-        'mollitia',
-        'laborum',
-        'dolores',
+        'veritatis',
     ],
     xml_keep_tags=[
-        'corporis',
+        'deserunt',
     ],
-), unstructured_api_key='explicabo')
+), unstructured_api_key='perferendis')
 
 if res.status_code == 200:
     # handle response
