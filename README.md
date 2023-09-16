@@ -57,11 +57,11 @@ if res.status_code == 200:
 ## Available Resources and Operations
 
 
-### [pipeline_v0](docs/sdks/pipelinev0/README.md)
+### [PipelineV0](docs/sdks/pipelinev0/README.md)
 
 * [build](docs/sdks/pipelinev0/README.md#build) - Pipeline 1
 
-### [pipeline_v0_0_31](docs/sdks/pipelinev0031/README.md)
+### [PipelineV0031](docs/sdks/pipelinev0031/README.md)
 
 * [build](docs/sdks/pipelinev0031/README.md#build) - Pipeline 1
 <!-- End SDK Available Operations -->

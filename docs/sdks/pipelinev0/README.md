@@ -1,4 +1,4 @@
-# pipeline_v0
+# PipelineV0
 
 ### Available Operations
 
