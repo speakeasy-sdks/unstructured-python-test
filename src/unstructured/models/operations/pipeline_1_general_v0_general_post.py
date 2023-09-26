@@ -21,9 +21,12 @@ class Pipeline1GeneralV0GeneralPostRequest:
 @dataclasses.dataclass
 class Pipeline1GeneralV0GeneralPostResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

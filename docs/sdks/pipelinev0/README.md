@@ -19,32 +19,32 @@ s = unstructured.Unstructured()
 
 res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
     coordinates=[
-        'suscipit',
+        'voluptatum',
     ],
     encoding=[
-        'iure',
+        'iusto',
     ],
     files=[
-        'magnam'.encode(),
+        'excepturi'.encode(),
     ],
-    gz_uncompressed_content_type='debitis',
+    gz_uncompressed_content_type='nisi',
     hi_res_model_name=[
-        'ipsa',
+        'recusandae',
     ],
     ocr_languages=[
-        'delectus',
+        'temporibus',
     ],
-    output_format='tempora',
+    output_format='ab',
     pdf_infer_table_structure=[
-        'suscipit',
+        'quis',
     ],
     strategy=[
-        'molestiae',
+        'veritatis',
     ],
     xml_keep_tags=[
-        'minus',
+        'deserunt',
     ],
-), unstructured_api_key='placeat')
+), unstructured_api_key='perferendis')
 
 if res.status_code == 200:
     # handle response

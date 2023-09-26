@@ -10,8 +10,6 @@ pip install git+https://github.com/speakeasy-sdks/unstructured-python-test.git
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```python
 import unstructured
 from unstructured.models import operations, shared
@@ -21,32 +19,32 @@ s = unstructured.Unstructured()
 
 res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
     coordinates=[
-        'corrupti',
+        'suscipit',
     ],
     encoding=[
-        'provident',
+        'iure',
     ],
     files=[
-        'distinctio'.encode(),
+        'magnam'.encode(),
     ],
-    gz_uncompressed_content_type='quibusdam',
+    gz_uncompressed_content_type='debitis',
     hi_res_model_name=[
-        'unde',
+        'ipsa',
     ],
     ocr_languages=[
-        'nulla',
+        'delectus',
     ],
-    output_format='corrupti',
+    output_format='tempora',
     pdf_infer_table_structure=[
-        'illum',
+        'suscipit',
     ],
     strategy=[
-        'vel',
+        'molestiae',
     ],
     xml_keep_tags=[
-        'error',
+        'minus',
     ],
-), unstructured_api_key='deserunt')
+), unstructured_api_key='placeat')
 
 if res.status_code == 200:
     # handle response
@@ -65,6 +63,32 @@ if res.status_code == 200:
 
 * [build](docs/sdks/pipelinev0031/README.md#build) - Pipeline 1
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+
+
+<!-- Start Pagination -->
+# Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned response object will have a `Next` method that can be called to pull down the next group of results. If the
+return value of `Next` is `None`, then there are no more pages to be fetched.
+
+Here's an example of one such pagination call:
+
+
+<!-- End Pagination -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 
