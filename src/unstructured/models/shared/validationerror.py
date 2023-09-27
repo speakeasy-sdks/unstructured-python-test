@@ -3,15 +3,21 @@
 from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
-from typing import Any
+from typing import Union
 from unstructured import utils
+
+
+
+@dataclasses.dataclass
+class ValidationErrorLoc:
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 
 @dataclasses.dataclass
 class ValidationError:
-    loc: list[Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('loc') }})
+    loc: list[Union[str, int]] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('loc') }})
     msg: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('msg') }})
     type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
