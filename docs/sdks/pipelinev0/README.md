@@ -28,24 +28,22 @@ res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
     files=[
         '[eAhpDJhn\''.encode(),
     ],
-    gz_uncompressed_content_type='Shoes',
     hi_res_model_name=[
-        'what',
+        'henry',
     ],
     ocr_languages=[
-        'whether',
+        'Meitnerium',
     ],
-    output_format='Direct',
     pdf_infer_table_structure=[
-        'gee',
+        'Convertible',
     ],
     strategy=[
-        'Metal',
+        'Direct',
     ],
     xml_keep_tags=[
-        'Avon',
+        'gee',
     ],
-), unstructured_api_key='questioningly')
+), unstructured_api_key='Metal')
 
 if res.status_code == 200:
     # handle response
