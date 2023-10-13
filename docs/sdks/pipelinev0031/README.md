@@ -47,6 +47,7 @@ res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
