@@ -5,4 +5,4 @@
 
 | Field                                                           | Type                                                            | Required                                                        | Description                                                     |
 | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| `detail`                                                        | list[[ValidationError](../../models/shared/validationerror.md)] | :heavy_minus_sign:                                              | N/A                                                             |
+| `detail`                                                        | List[[ValidationError](../../models/shared/validationerror.md)] | :heavy_minus_sign:                                              | N/A                                                             |

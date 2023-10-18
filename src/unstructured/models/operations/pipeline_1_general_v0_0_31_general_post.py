@@ -8,13 +8,11 @@ from ..shared import pipeline_body_v0_0_31 as shared_pipeline_body_v0_0_31
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class Pipeline1GeneralV0031GeneralPostRequest:
     pipeline_body_v0_0_31: Optional[shared_pipeline_body_v0_0_31.PipelineBodyV0031] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
     unstructured_api_key: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'unstructured-api-key', 'style': 'simple', 'explode': False }})
     
-
 
 
 

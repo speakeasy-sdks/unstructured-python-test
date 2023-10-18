@@ -2,21 +2,20 @@
 
 from __future__ import annotations
 import dataclasses
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
 class PipelineBodyV0031:
-    coordinates: Optional[list[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'coordinates' }})
-    encoding: Optional[list[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'encoding' }})
-    files: Optional[list[bytes]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'files', 'json': True }})
+    coordinates: Optional[List[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'coordinates' }})
+    encoding: Optional[List[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'encoding' }})
+    files: Optional[List[bytes]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'files', 'json': True }})
     gz_uncompressed_content_type: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'gz_uncompressed_content_type' }})
-    hi_res_model_name: Optional[list[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'hi_res_model_name' }})
-    ocr_languages: Optional[list[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'ocr_languages' }})
+    hi_res_model_name: Optional[List[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'hi_res_model_name' }})
+    ocr_languages: Optional[List[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'ocr_languages' }})
     output_format: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'output_format' }})
-    pdf_infer_table_structure: Optional[list[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'pdf_infer_table_structure' }})
-    strategy: Optional[list[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'strategy' }})
-    xml_keep_tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'xml_keep_tags' }})
+    pdf_infer_table_structure: Optional[List[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'pdf_infer_table_structure' }})
+    strategy: Optional[List[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'strategy' }})
+    xml_keep_tags: Optional[List[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'xml_keep_tags' }})
     
 
