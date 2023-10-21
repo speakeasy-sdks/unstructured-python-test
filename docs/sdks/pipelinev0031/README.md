@@ -20,30 +20,33 @@ s = unstructured.Unstructured()
 
 res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(
     coordinates=[
-        'Practical',
+        'string',
     ],
     encoding=[
-        'Gasoline',
+        'string',
     ],
     files=[
-        '[eAhpDJhn\''.encode(),
+        shared.PipelineBodyV0031Files(
+            content='9G&x$kc[eA'.encode(),
+            files='string',
+        ),
     ],
     hi_res_model_name=[
-        'henry',
+        'string',
     ],
     ocr_languages=[
-        'Meitnerium',
+        'string',
     ],
     pdf_infer_table_structure=[
-        'Convertible',
+        'string',
     ],
     strategy=[
-        'Direct',
+        'string',
     ],
     xml_keep_tags=[
-        'gee',
+        'string',
     ],
-), unstructured_api_key='Metal')
+), unstructured_api_key='string')
 
 if res.status_code == 200:
     # handle response

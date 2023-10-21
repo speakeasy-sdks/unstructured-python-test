@@ -5,4 +5,4 @@ from .pipeline_body_v0 import *
 from .pipeline_body_v0_0_31 import *
 from .validationerror import *
 
-__all__ = ["HTTPValidationError","PipelineBodyV0","PipelineBodyV0031","ValidationError","ValidationErrorLoc"]
+__all__ = ["HTTPValidationError","PipelineBodyV0","PipelineBodyV0031","PipelineBodyV0031Files","PipelineBodyV0Files","ValidationError","ValidationErrorLoc"]
