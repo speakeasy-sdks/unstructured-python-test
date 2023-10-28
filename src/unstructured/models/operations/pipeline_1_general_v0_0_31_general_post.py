@@ -8,7 +8,6 @@ from ..shared import pipeline_body_v0_0_31 as shared_pipeline_body_v0_0_31
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class Pipeline1GeneralV0031GeneralPostRequest:
     pipeline_body_v0_0_31: Optional[shared_pipeline_body_v0_0_31.PipelineBodyV0031] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'multipart/form-data' }})
@@ -17,13 +16,15 @@ class Pipeline1GeneralV0031GeneralPostRequest:
 
 
 
-
 @dataclasses.dataclass
 class Pipeline1GeneralV0031GeneralPostResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     http_validation_error: Optional[shared_httpvalidationerror.HTTPValidationError] = dataclasses.field(default=None)
     r"""Validation Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

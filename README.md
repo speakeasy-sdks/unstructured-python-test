@@ -10,63 +10,46 @@ pip install git+https://github.com/speakeasy-sdks/unstructured-python-test.git
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```python
 import unstructured
 from unstructured.models import operations, shared
 
 s = unstructured.Unstructured()
 
-req = operations.Pipeline1GeneralV0GeneralPostRequest(
-    pipeline_body_v0=shared.PipelineBodyV0(
-        coordinates=[
-            'provident',
-            'distinctio',
-            'quibusdam',
-        ],
-        encoding=[
-            'nulla',
-            'corrupti',
-            'illum',
-        ],
-        files=[
-            'error'.encode(),
-            'deserunt'.encode(),
-        ],
-        gz_uncompressed_content_type='suscipit',
-        hi_res_model_name=[
-            'magnam',
-            'debitis',
-        ],
-        ocr_languages=[
-            'delectus',
-        ],
-        output_format='tempora',
-        pdf_infer_table_structure=[
-            'molestiae',
-            'minus',
-        ],
-        strategy=[
-            'voluptatum',
-            'iusto',
-            'excepturi',
-            'nisi',
-        ],
-        xml_keep_tags=[
-            'temporibus',
-            'ab',
-            'quis',
-            'veritatis',
-        ],
-    ),
-    unstructured_api_key='deserunt',
-)
 
-res = s.pipeline_v0.build(req)
+res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
+    coordinates=[
+        'string',
+    ],
+    encoding=[
+        'string',
+    ],
+    files=[
+        shared.PipelineBodyV0Files(
+            content='9G&x$kc[eA'.encode(),
+            files='string',
+        ),
+    ],
+    hi_res_model_name=[
+        'string',
+    ],
+    ocr_languages=[
+        'string',
+    ],
+    pdf_infer_table_structure=[
+        'string',
+    ],
+    strategy=[
+        'string',
+    ],
+    xml_keep_tags=[
+        'string',
+    ],
+), unstructured_api_key='string')
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 <!-- End SDK Example Usage -->
 
@@ -82,6 +65,171 @@ if res.status_code == 200:
 
 * [build](docs/sdks/pipelinev0031/README.md#build) - Pipeline 1
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+<!-- End Dev Containers -->
+
+
+
+<!-- Start Pagination -->
+# Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned response object will have a `Next` method that can be called to pull down the next group of results. If the
+return value of `Next` is `None`, then there are no more pages to be fetched.
+
+Here's an example of one such pagination call:
+<!-- End Pagination -->
+
+
+
+<!-- Start Error Handling -->
+# Error Handling
+
+Handling errors in your SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will raise the appropriate Error type.
+
+
+<!-- End Error Handling -->
+
+
+
+<!-- Start Server Selection -->
+# Server Selection
+
+## Select Server by Index
+
+You can override the default server globally by passing a server index to the `server_idx: int` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `https://api.unstructured.io` | None |
+
+For example:
+
+
+```python
+import unstructured
+from unstructured.models import operations, shared
+
+s = unstructured.Unstructured(
+    server_idx=0
+)
+
+
+res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
+    coordinates=[
+        'string',
+    ],
+    encoding=[
+        'string',
+    ],
+    files=[
+        shared.PipelineBodyV0Files(
+            content='9G&x$kc[eA'.encode(),
+            files='string',
+        ),
+    ],
+    hi_res_model_name=[
+        'string',
+    ],
+    ocr_languages=[
+        'string',
+    ],
+    pdf_infer_table_structure=[
+        'string',
+    ],
+    strategy=[
+        'string',
+    ],
+    xml_keep_tags=[
+        'string',
+    ],
+), unstructured_api_key='string')
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+
+## Override Server URL Per-Client
+
+The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
+
+
+```python
+import unstructured
+from unstructured.models import operations, shared
+
+s = unstructured.Unstructured(
+    server_url="https://api.unstructured.io"
+)
+
+
+res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
+    coordinates=[
+        'string',
+    ],
+    encoding=[
+        'string',
+    ],
+    files=[
+        shared.PipelineBodyV0Files(
+            content='9G&x$kc[eA'.encode(),
+            files='string',
+        ),
+    ],
+    hi_res_model_name=[
+        'string',
+    ],
+    ocr_languages=[
+        'string',
+    ],
+    pdf_infer_table_structure=[
+        'string',
+    ],
+    strategy=[
+        'string',
+    ],
+    xml_keep_tags=[
+        'string',
+    ],
+), unstructured_api_key='string')
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+<!-- End Server Selection -->
+
+
+
+<!-- Start Custom HTTP Client -->
+# Custom HTTP Client
+
+The Python SDK makes API calls using the (requests)[https://pypi.org/project/requests/] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `requests.Session` object.
+
+
+For example, you could specify a header for every request that your sdk makes as follows:
+
+```python
+import unstructured
+import requests
+
+http_client = requests.Session()
+http_client.headers.update({'x-custom-header': 'someValue'})
+s = unstructured.Unstructured(client: http_client)
+```
+
+
+<!-- End Custom HTTP Client -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 
