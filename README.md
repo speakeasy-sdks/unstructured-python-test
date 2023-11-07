@@ -17,7 +17,7 @@ from unstructured.models import operations, shared
 s = unstructured.Unstructured()
 
 
-res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
+res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(
     coordinates=[
         'string',
     ],
@@ -25,9 +25,9 @@ res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
         'string',
     ],
     files=[
-        shared.PipelineBodyV0Files(
-            content='9G&x$kc[eA'.encode(),
-            files='string',
+        shared.PipelineBodyV0031Files(
+            content='0x591E0BfdA7'.encode(),
+            file_name='cab_touring_henry.mpg4',
         ),
     ],
     hi_res_model_name=[
@@ -57,20 +57,18 @@ if res.status_code == 200:
 ## Available Resources and Operations
 
 
-### [pipeline_v0](docs/sdks/pipelinev0/README.md)
-
-* [build](docs/sdks/pipelinev0/README.md#build) - Pipeline 1
-
-### [pipeline_v0_0_31](docs/sdks/pipelinev0031/README.md)
+### [.pipeline_v0_0_31](docs/sdks/pipelinev0031/README.md)
 
 * [build](docs/sdks/pipelinev0031/README.md#build) - Pipeline 1
+
+### [.pipeline_v0](docs/sdks/pipelinev0/README.md)
+
+* [build](docs/sdks/pipelinev0/README.md#build) - Pipeline 1
 <!-- End SDK Available Operations -->
 
 
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 
@@ -82,6 +80,55 @@ if res.status_code == 200:
 Handling errors in your SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will raise the appropriate Error type.
 
 
+## Example
+
+```python
+import unstructured
+from unstructured.models import operations, shared
+
+s = unstructured.Unstructured()
+
+
+res = None
+try:
+    res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(
+    coordinates=[
+        'string',
+    ],
+    encoding=[
+        'string',
+    ],
+    files=[
+        shared.PipelineBodyV0031Files(
+            content='0x591E0BfdA7'.encode(),
+            file_name='cab_touring_henry.mpg4',
+        ),
+    ],
+    hi_res_model_name=[
+        'string',
+    ],
+    ocr_languages=[
+        'string',
+    ],
+    pdf_infer_table_structure=[
+        'string',
+    ],
+    strategy=[
+        'string',
+    ],
+    xml_keep_tags=[
+        'string',
+    ],
+), unstructured_api_key='string')
+
+except (HTTPValidationError) as e:
+    print(e) # handle exception
+
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
 <!-- End Error Handling -->
 
 
@@ -99,17 +146,16 @@ You can override the default server globally by passing a server index to the `s
 
 For example:
 
-
 ```python
 import unstructured
 from unstructured.models import operations, shared
 
 s = unstructured.Unstructured(
-    server_idx=0
+    server_idx=0,
 )
 
 
-res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
+res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(
     coordinates=[
         'string',
     ],
@@ -117,9 +163,9 @@ res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
         'string',
     ],
     files=[
-        shared.PipelineBodyV0Files(
-            content='9G&x$kc[eA'.encode(),
-            files='string',
+        shared.PipelineBodyV0031Files(
+            content='0x591E0BfdA7'.encode(),
+            file_name='cab_touring_henry.mpg4',
         ),
     ],
     hi_res_model_name=[
@@ -149,17 +195,16 @@ if res.status_code == 200:
 
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 
-
 ```python
 import unstructured
 from unstructured.models import operations, shared
 
 s = unstructured.Unstructured(
-    server_url="https://api.unstructured.io"
+    server_url="https://api.unstructured.io",
 )
 
 
-res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
+res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(
     coordinates=[
         'string',
     ],
@@ -167,9 +212,9 @@ res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
         'string',
     ],
     files=[
-        shared.PipelineBodyV0Files(
-            content='9G&x$kc[eA'.encode(),
-            files='string',
+        shared.PipelineBodyV0031Files(
+            content='0x591E0BfdA7'.encode(),
+            file_name='cab_touring_henry.mpg4',
         ),
     ],
     hi_res_model_name=[
@@ -213,8 +258,6 @@ http_client = requests.Session()
 http_client.headers.update({'x-custom-header': 'someValue'})
 s = unstructured.Unstructured(client: http_client)
 ```
-
-
 <!-- End Custom HTTP Client -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->

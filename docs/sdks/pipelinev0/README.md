@@ -1,5 +1,5 @@
 # PipelineV0
-(*pipeline_v0*)
+(*.pipeline_v0*)
 
 ### Available Operations
 
@@ -26,9 +26,9 @@ res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
         'string',
     ],
     files=[
-        shared.PipelineBodyV0Files(
-            content='9G&x$kc[eA'.encode(),
-            files='string',
+        shared.Files(
+            content='0x591E0BfdA7'.encode(),
+            file_name='cab_touring_henry.mpg4',
         ),
     ],
     hi_res_model_name=[

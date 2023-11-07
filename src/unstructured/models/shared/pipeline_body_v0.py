@@ -6,9 +6,9 @@ from typing import List, Optional
 
 
 @dataclasses.dataclass
-class PipelineBodyV0Files:
+class Files:
     content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
-    files: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'files' }})
+    file_name: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'files' }})
     
 
 
@@ -17,7 +17,7 @@ class PipelineBodyV0Files:
 class PipelineBodyV0:
     coordinates: Optional[List[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'coordinates' }})
     encoding: Optional[List[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'encoding' }})
-    files: Optional[List[PipelineBodyV0Files]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'files' }})
+    files: Optional[List[Files]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'files' }})
     gz_uncompressed_content_type: Optional[str] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'gz_uncompressed_content_type' }})
     hi_res_model_name: Optional[List[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'hi_res_model_name' }})
     ocr_languages: Optional[List[str]] = dataclasses.field(default=None, metadata={'multipart_form': { 'field_name': 'ocr_languages' }})

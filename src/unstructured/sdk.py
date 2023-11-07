@@ -8,8 +8,8 @@ from typing import Dict
 from unstructured import utils
 
 class Unstructured:
-    pipeline_v0: PipelineV0
     pipeline_v0_0_31: PipelineV0031
+    pipeline_v0: PipelineV0
 
     sdk_configuration: SDKConfiguration
 
@@ -47,6 +47,6 @@ class Unstructured:
         self._init_sdks()
     
     def _init_sdks(self):
-        self.pipeline_v0 = PipelineV0(self.sdk_configuration)
         self.pipeline_v0_0_31 = PipelineV0031(self.sdk_configuration)
+        self.pipeline_v0 = PipelineV0(self.sdk_configuration)
     

@@ -8,7 +8,7 @@ from unstructured.models import operations, shared
 s = unstructured.Unstructured()
 
 
-res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
+res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(
     coordinates=[
         'string',
     ],
@@ -16,9 +16,9 @@ res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(
         'string',
     ],
     files=[
-        shared.PipelineBodyV0Files(
-            content='9G&x$kc[eA'.encode(),
-            files='string',
+        shared.PipelineBodyV0031Files(
+            content='0x591E0BfdA7'.encode(),
+            file_name='cab_touring_henry.mpg4',
         ),
     ],
     hi_res_model_name=[

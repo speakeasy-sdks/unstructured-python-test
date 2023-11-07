@@ -8,7 +8,7 @@ from typing import List, Optional
 @dataclasses.dataclass
 class PipelineBodyV0031Files:
     content: bytes = dataclasses.field(metadata={'multipart_form': { 'content': True }})
-    files: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'files' }})
+    file_name: str = dataclasses.field(metadata={'multipart_form': { 'field_name': 'files' }})
     
 
 
