@@ -1,5 +1,5 @@
 # PipelineV0
-(*.pipeline_v0*)
+(*pipeline_v0*)
 
 ### Available Operations
 
@@ -64,4 +64,9 @@ if res.status_code == 200:
 ### Response
 
 **[operations.Pipeline1GeneralV0GeneralPostResponse](../../models/operations/pipeline1generalv0generalpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |

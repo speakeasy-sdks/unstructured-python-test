@@ -57,11 +57,11 @@ if res.status_code == 200:
 ## Available Resources and Operations
 
 
-### [.pipeline_v0_0_31](docs/sdks/pipelinev0031/README.md)
+### [pipeline_v0_0_31](docs/sdks/pipelinev0031/README.md)
 
 * [build](docs/sdks/pipelinev0031/README.md#build) - Pipeline 1
 
-### [.pipeline_v0](docs/sdks/pipelinev0/README.md)
+### [pipeline_v0](docs/sdks/pipelinev0/README.md)
 
 * [build](docs/sdks/pipelinev0/README.md#build) - Pipeline 1
 <!-- End SDK Available Operations -->
@@ -77,7 +77,12 @@ if res.status_code == 200:
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will raise the appropriate Error type.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will raise the appropriate Error type.
+
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 
 ## Example
@@ -120,8 +125,10 @@ try:
         'string',
     ],
 ), unstructured_api_key='string')
+except (errors.HTTPValidationError) as e:
+    print(e) # handle exception
 
-except (HTTPValidationError) as e:
+except (errors.SDKError) as e:
     print(e) # handle exception
 
 
@@ -248,7 +255,7 @@ if res.status_code == 200:
 The Python SDK makes API calls using the (requests)[https://pypi.org/project/requests/] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `requests.Session` object.
 
 
-For example, you could specify a header for every request that your sdk makes as follows:
+For example, you could specify a header for every request that this sdk makes as follows:
 
 ```python
 import unstructured
