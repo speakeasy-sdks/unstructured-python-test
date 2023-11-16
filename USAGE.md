@@ -1,6 +1,4 @@
 <!-- Start SDK Example Usage -->
-
-
 ```python
 import unstructured
 from unstructured.models import operations, shared
