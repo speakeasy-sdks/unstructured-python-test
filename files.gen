@@ -9,10 +9,11 @@ src/unstructured/utils/__init__.py
 src/unstructured/utils/retries.py
 src/unstructured/utils/utils.py
 src/unstructured/models/errors/sdkerror.py
+tests/helpers.py
 src/unstructured/models/operations/pipeline_1_general_v0_0_31_general_post.py
 src/unstructured/models/operations/pipeline_1_general_v0_general_post.py
 src/unstructured/models/errors/httpvalidationerror.py
-src/unstructured/models/errors/validationerror.py
+src/unstructured/models/shared/validationerror.py
 src/unstructured/models/shared/pipeline_body_v0_0_31.py
 src/unstructured/models/shared/pipeline_body_v0.py
 src/unstructured/models/__init__.py
@@ -25,8 +26,8 @@ docs/models/operations/pipeline1generalv0031generalpostresponse.md
 docs/models/operations/pipeline1generalv0generalpostrequest.md
 docs/models/operations/pipeline1generalv0generalpostresponse.md
 docs/models/errors/httpvalidationerror.md
-docs/models/errors/loc.md
-docs/models/errors/validationerror.md
+docs/models/shared/loc.md
+docs/models/shared/validationerror.md
 docs/models/shared/pipelinebodyv0031files.md
 docs/models/shared/pipelinebodyv0031.md
 docs/models/shared/files.md

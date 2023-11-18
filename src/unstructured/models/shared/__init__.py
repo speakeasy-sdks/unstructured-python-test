@@ -2,5 +2,6 @@
 
 from .pipeline_body_v0 import *
 from .pipeline_body_v0_0_31 import *
+from .validationerror import *
 
-__all__ = ["Files","PipelineBodyV0","PipelineBodyV0031","PipelineBodyV0031Files"]
+__all__ = ["Files","PipelineBodyV0","PipelineBodyV0031","PipelineBodyV0031Files","ValidationError"]
