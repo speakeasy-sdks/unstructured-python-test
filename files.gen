@@ -20,7 +20,6 @@ src/unstructured/models/__init__.py
 src/unstructured/models/errors/__init__.py
 src/unstructured/models/operations/__init__.py
 src/unstructured/models/shared/__init__.py
-USAGE.md
 docs/models/operations/pipeline1generalv0031generalpostrequest.md
 docs/models/operations/pipeline1generalv0031generalpostresponse.md
 docs/models/operations/pipeline1generalv0generalpostrequest.md
@@ -35,4 +34,5 @@ docs/models/shared/pipelinebodyv0.md
 docs/sdks/unstructured/README.md
 docs/sdks/pipelinev0031/README.md
 docs/sdks/pipelinev0/README.md
+USAGE.md
 .gitattributes
