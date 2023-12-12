@@ -24,7 +24,7 @@ class PipelineV0:
         
         url = base_url + '/general/v0/general'
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, "pipeline_body_v0", False, True, 'multipart')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.Pipeline1GeneralV0GeneralPostRequest, "pipeline_body_v0", False, True, 'multipart')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
