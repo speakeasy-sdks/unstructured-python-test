@@ -4,7 +4,7 @@ management:
   docChecksum: 8fe3141706ab9576a7ca012e3b45a80f
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.228.1
+  generationVersion: 2.233.2
   releaseVersion: 2.1.2
   configChecksum: bf62955dbdcba96e5a95cfdfc22e377b
   repoURL: https://github.com/speakeasy-sdks/unstructured-python-test.git
