@@ -4,15 +4,15 @@ management:
   docChecksum: 8fe3141706ab9576a7ca012e3b45a80f
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.248.1
-  releaseVersion: 3.0.0
-  configChecksum: 82dbbfca895b4645eeb1653ad89b7836
+  generationVersion: 2.250.12
+  releaseVersion: 4.0.0
+  configChecksum: 62dcdc7e22a04a82810aeb1abf627185
   repoURL: https://github.com/speakeasy-sdks/unstructured-python-test.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/unstructured-python-test.git
 features:
   python:
-    core: 4.4.4
+    core: 4.4.5
     flattening: 2.81.1
     globalServerURLs: 2.82.1
     nameOverrides: 2.81.1
