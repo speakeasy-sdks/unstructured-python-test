@@ -15,40 +15,12 @@ pip install git+https://github.com/speakeasy-sdks/unstructured-python-test.git
 
 ```python
 import unstructured
-from unstructured.models import operations, shared
+from unstructured.models import shared
 
 s = unstructured.Unstructured()
 
 
-res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(
-    coordinates=[
-        'string',
-    ],
-    encoding=[
-        'string',
-    ],
-    files=[
-        shared.PipelineBodyV0031Files(
-            content='0x591E0BfdA7'.encode(),
-            file_name='cab_touring_henry.mpg4',
-        ),
-    ],
-    hi_res_model_name=[
-        'string',
-    ],
-    ocr_languages=[
-        'string',
-    ],
-    pdf_infer_table_structure=[
-        'string',
-    ],
-    strategy=[
-        'string',
-    ],
-    xml_keep_tags=[
-        'string',
-    ],
-), unstructured_api_key='string')
+res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(), unstructured_api_key='string')
 
 if res.status_code == 200:
     # handle response
@@ -86,47 +58,19 @@ Handling errors in this SDK should largely match your expectations.  All operati
 
 ```python
 import unstructured
-from unstructured.models import operations, shared
+from unstructured.models import errors, shared
 
 s = unstructured.Unstructured()
 
 
 res = None
 try:
-    res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(
-    coordinates=[
-        'string',
-    ],
-    encoding=[
-        'string',
-    ],
-    files=[
-        shared.PipelineBodyV0031Files(
-            content='0x591E0BfdA7'.encode(),
-            file_name='cab_touring_henry.mpg4',
-        ),
-    ],
-    hi_res_model_name=[
-        'string',
-    ],
-    ocr_languages=[
-        'string',
-    ],
-    pdf_infer_table_structure=[
-        'string',
-    ],
-    strategy=[
-        'string',
-    ],
-    xml_keep_tags=[
-        'string',
-    ],
-), unstructured_api_key='string')
+    res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(), unstructured_api_key='string')
 except errors.HTTPValidationError as e:
-    print(e)  # handle exception
+    # handle exception
     raise(e)
 except errors.SDKError as e:
-    print(e)  # handle exception
+    # handle exception
     raise(e)
 
 if res.status_code == 200:
@@ -152,42 +96,14 @@ You can override the default server globally by passing a server index to the `s
 
 ```python
 import unstructured
-from unstructured.models import operations, shared
+from unstructured.models import shared
 
 s = unstructured.Unstructured(
     server_idx=0,
 )
 
 
-res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(
-    coordinates=[
-        'string',
-    ],
-    encoding=[
-        'string',
-    ],
-    files=[
-        shared.PipelineBodyV0031Files(
-            content='0x591E0BfdA7'.encode(),
-            file_name='cab_touring_henry.mpg4',
-        ),
-    ],
-    hi_res_model_name=[
-        'string',
-    ],
-    ocr_languages=[
-        'string',
-    ],
-    pdf_infer_table_structure=[
-        'string',
-    ],
-    strategy=[
-        'string',
-    ],
-    xml_keep_tags=[
-        'string',
-    ],
-), unstructured_api_key='string')
+res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(), unstructured_api_key='string')
 
 if res.status_code == 200:
     # handle response
@@ -200,42 +116,14 @@ if res.status_code == 200:
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 ```python
 import unstructured
-from unstructured.models import operations, shared
+from unstructured.models import shared
 
 s = unstructured.Unstructured(
     server_url="https://api.unstructured.io",
 )
 
 
-res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(
-    coordinates=[
-        'string',
-    ],
-    encoding=[
-        'string',
-    ],
-    files=[
-        shared.PipelineBodyV0031Files(
-            content='0x591E0BfdA7'.encode(),
-            file_name='cab_touring_henry.mpg4',
-        ),
-    ],
-    hi_res_model_name=[
-        'string',
-    ],
-    ocr_languages=[
-        'string',
-    ],
-    pdf_infer_table_structure=[
-        'string',
-    ],
-    strategy=[
-        'string',
-    ],
-    xml_keep_tags=[
-        'string',
-    ],
-), unstructured_api_key='string')
+res = s.pipeline_v0_0_31.build(pipeline_body_v0_0_31=shared.PipelineBodyV0031(), unstructured_api_key='string')
 
 if res.status_code == 200:
     # handle response
