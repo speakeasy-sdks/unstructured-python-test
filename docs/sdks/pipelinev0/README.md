@@ -18,7 +18,7 @@ from unstructured.models import shared
 s = unstructured.Unstructured()
 
 
-res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(), unstructured_api_key='string')
+res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(), unstructured_api_key='<value>')
 
 if res.status_code == 200:
     # handle response
