@@ -4,15 +4,15 @@ management:
   docChecksum: 8fe3141706ab9576a7ca012e3b45a80f
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.258.2
-  releaseVersion: 4.0.1
-  configChecksum: fe8d1fa26d2b4e5b35b178c97f1f69cc
+  generationVersion: 2.275.4
+  releaseVersion: 4.1.0
+  configChecksum: 2bb0a0bb0b4b91e043f9f73f93563d73
   repoURL: https://github.com/speakeasy-sdks/unstructured-python-test.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/unstructured-python-test.git
 features:
   python:
-    core: 4.4.6
+    core: 4.5.0
     flattening: 2.81.1
     globalServerURLs: 2.82.1
     nameOverrides: 2.81.1
@@ -56,3 +56,6 @@ generatedFiles:
   - docs/sdks/pipelinev0/README.md
   - USAGE.md
   - .gitattributes
+  - src/unstructured/_hooks/sdkhooks.py
+  - src/unstructured/_hooks/types.py
+  - src/unstructured/_hooks/__init__.py
