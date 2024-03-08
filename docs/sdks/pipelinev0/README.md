@@ -20,9 +20,10 @@ s = unstructured.Unstructured()
 
 res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(), unstructured_api_key='<value>')
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
