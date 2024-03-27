@@ -3,16 +3,16 @@ id: bc80524c-ec60-4f82-bfd0-01abcede80ee
 management:
   docChecksum: 8fe3141706ab9576a7ca012e3b45a80f
   docVersion: 1.0.0
-  speakeasyVersion: 1.207.1
-  generationVersion: 2.280.6
-  releaseVersion: 4.2.1
-  configChecksum: a8fa83e2263f11b0f98f3d5600e07784
+  speakeasyVersion: 1.227.0
+  generationVersion: 2.291.0
+  releaseVersion: 4.2.2
+  configChecksum: 147ebc27cf31e508c43b074f99e99958
   repoURL: https://github.com/speakeasy-sdks/unstructured-python-test.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/unstructured-python-test.git
 features:
   python:
-    core: 4.5.1
+    core: 4.5.2
     flattening: 2.81.1
     globalServerURLs: 2.82.2
     nameOverrides: 2.81.1
