@@ -1,0 +1,63 @@
+lockVersion: 2.0.0
+id: bc80524c-ec60-4f82-bfd0-01abcede80ee
+management:
+  docChecksum: 8fe3141706ab9576a7ca012e3b45a80f
+  docVersion: 1.0.0
+  speakeasyVersion: 1.227.0
+  generationVersion: 2.291.0
+  releaseVersion: 4.2.2
+  configChecksum: 147ebc27cf31e508c43b074f99e99958
+  repoURL: https://github.com/speakeasy-sdks/unstructured-python-test.git
+  repoSubDirectory: .
+  installationURL: https://github.com/speakeasy-sdks/unstructured-python-test.git
+features:
+  python:
+    core: 4.5.2
+    flattening: 2.81.1
+    globalServerURLs: 2.82.2
+    nameOverrides: 2.81.1
+    responseFormat: 0.1.0
+    unions: 2.82.6
+generatedFiles:
+  - src/unstructured/sdkconfiguration.py
+  - src/unstructured/pipeline_v0_0_31.py
+  - src/unstructured/pipeline_v0.py
+  - src/unstructured/sdk.py
+  - py.typed
+  - pylintrc
+  - setup.py
+  - src/unstructured/__init__.py
+  - src/unstructured/utils/__init__.py
+  - src/unstructured/utils/retries.py
+  - src/unstructured/utils/utils.py
+  - src/unstructured/models/errors/sdkerror.py
+  - tests/helpers.py
+  - src/unstructured/models/operations/pipeline_1_general_v0_0_31_general_post.py
+  - src/unstructured/models/operations/pipeline_1_general_v0_general_post.py
+  - src/unstructured/models/errors/httpvalidationerror.py
+  - src/unstructured/models/shared/validationerror.py
+  - src/unstructured/models/shared/pipeline_body_v0_0_31.py
+  - src/unstructured/models/shared/pipeline_body_v0.py
+  - src/unstructured/models/__init__.py
+  - src/unstructured/models/errors/__init__.py
+  - src/unstructured/models/operations/__init__.py
+  - src/unstructured/models/shared/__init__.py
+  - docs/models/operations/pipeline1generalv0031generalpostrequest.md
+  - docs/models/operations/pipeline1generalv0031generalpostresponse.md
+  - docs/models/operations/pipeline1generalv0generalpostrequest.md
+  - docs/models/operations/pipeline1generalv0generalpostresponse.md
+  - docs/models/errors/httpvalidationerror.md
+  - docs/models/shared/loc.md
+  - docs/models/shared/validationerror.md
+  - docs/models/shared/pipelinebodyv0031files.md
+  - docs/models/shared/pipelinebodyv0031.md
+  - docs/models/shared/files.md
+  - docs/models/shared/pipelinebodyv0.md
+  - docs/sdks/unstructured/README.md
+  - docs/sdks/pipelinev0031/README.md
+  - docs/sdks/pipelinev0/README.md
+  - USAGE.md
+  - .gitattributes
+  - src/unstructured/_hooks/sdkhooks.py
+  - src/unstructured/_hooks/types.py
+  - src/unstructured/_hooks/__init__.py

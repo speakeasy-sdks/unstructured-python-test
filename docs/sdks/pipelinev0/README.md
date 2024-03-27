@@ -1,4 +1,5 @@
-# pipeline_v0
+# PipelineV0
+(*pipeline_v0*)
 
 ### Available Operations
 
@@ -12,73 +13,33 @@ Pipeline 1
 
 ```python
 import unstructured
-from unstructured.models import operations, shared
+from unstructured.models import shared
 
 s = unstructured.Unstructured()
 
-req = operations.Pipeline1GeneralV0GeneralPostRequest(
-    pipeline_body_v0=shared.PipelineBodyV0(
-        coordinates=[
-            'ipsam',
-        ],
-        encoding=[
-            'sapiente',
-            'quo',
-            'odit',
-            'at',
-        ],
-        files=[
-            'maiores'.encode(),
-            'molestiae'.encode(),
-            'quod'.encode(),
-            'quod'.encode(),
-        ],
-        gz_uncompressed_content_type='esse',
-        hi_res_model_name=[
-            'porro',
-            'dolorum',
-            'dicta',
-        ],
-        ocr_languages=[
-            'officia',
-            'occaecati',
-            'fugit',
-        ],
-        output_format='deleniti',
-        pdf_infer_table_structure=[
-            'optio',
-            'totam',
-            'beatae',
-            'commodi',
-        ],
-        strategy=[
-            'modi',
-            'qui',
-        ],
-        xml_keep_tags=[
-            'cum',
-            'esse',
-            'ipsum',
-            'excepturi',
-        ],
-    ),
-    unstructured_api_key='aspernatur',
-)
 
-res = s.pipeline_v0.build(req)
+res = s.pipeline_v0.build(pipeline_body_v0=shared.PipelineBodyV0(), unstructured_api_key='<value>')
 
-if res.status_code == 200:
+if res is not None:
     # handle response
+    pass
+
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.Pipeline1GeneralV0GeneralPostRequest](../../models/operations/pipeline1generalv0generalpostrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `pipeline_body_v0`                                                       | [Optional[shared.PipelineBodyV0]](../../models/shared/pipelinebodyv0.md) | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `unstructured_api_key`                                                   | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | N/A                                                                      |
 
 
 ### Response
 
 **[operations.Pipeline1GeneralV0GeneralPostResponse](../../models/operations/pipeline1generalv0generalpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 4x-5xx                     | */*                        |
